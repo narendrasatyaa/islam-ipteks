@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wakaf Pintar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #navbar {
+            position: fixed;
+        }
+        
+        #main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            margin-top: 24px;
+            width: 100%;
+            max-width: 1200px;
+            padding: 30px;
+        }
+        
+        @media (min-width: 768px) {
+            #main {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        
+        #img {
+            margin-left: 50px;
+            position: relative;
+            width: 320px;
+            height: 320px;
+            flex-shrink: 0;
+        }
+        
+        #img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        #img .absolute {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: white;
+            color: black;
+            padding: 8px 16px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        #transaksi {
+            margin-right: 50px;
+            background: white;
+            color: black;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            flex-shrink: 0;
+        }
+        
+        #transaksi h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        #transaksi .progress-bar {
+            background: #e5e7eb;
+            border-radius: 8px;
+            height: 8px;
+            margin-top: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #transaksi .progress-bar div {
+            background: black;
+            height: 100%;
+            width: 80%;
+            border-radius: 8px;
+        }
+        
+        #transaksi .cta {
+            text-align: center;
+            margin-top: 24px;
+        }
+        
+        #transaksi .cta a {
+            display: inline-block;
+            background: teal;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 24px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        #transaksi .cta a:hover {
+            background: #005f5f;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-b from-black to-teal-900 min-h-screen text-white font-sans">
+
+    <header id="navbar" class="flex justify-between items-center p-4">
+        <div class="flex items-center space-x-2">
+            <img src="./Group 5.png" alt="Logo" class="h-8">
+        </div>
+        <div class="space-x-8">
+            <a class="text-white hover:text-teal-400" href="home.html">Home</a>
+            <a class="text-white hover:text-teal-400" href="profile.html">Profile</a>
+            <a class="text-white hover:text-teal-400" href="regulasi.html">Regulasi</a>
+            <a class="text-white hover:text-teal-400" href="literasiwakaf.html">Literasi Wakaf</a>
+            <a class="text-white hover:text-teal-400" href="callcenter.html">Call Center</a>
+        </div>
+    </header>
+
+
+    <section id="main" class="flex flex-col lg:flex-row lg:items-start justify-center px-4 lg:space-x-12 mt-12">
+        <!-- Gambar di kiri -->
+        <div id="img" class="relative w-80 h-80 flex-shrink-0">
+            <img src="./bayarwakaf.png" alt="Illustration" class="h-full w-full object-contain">
+            <div class="absolute -top-10 left-0 bg-white text-black py-2 px-4 rounded-xl shadow-lg">
+                <a class="text-lg font-semibold" href="home.html">Maaf ya, Gak Jadi..</a>
+            </div>
+        </div>
+
+        <!-- Transaksi di kanan -->
+        <div id="transaksi" class="bg-white text-black rounded-lg p-6 shadow-lg w-full max-w-md">
+            <h2 class="text-lg font-semibold">Wakaf Uang</h2>
+            <p class="mt-2 font-bold">Gerakan Wakaf Uang WakafPintar Tahun 2024</p>
+            <div class="mt-4 text-sm flex justify-between items-center">
+                <span>Dana Terkumpul</span>
+                <span>Rp. 234.456.908,00</span>
+            </div>
+            <div class="bg-gray-200 w-full h-2 rounded-full mt-2 relative">
+                <div class="bg-black h-2 rounded-full" style="width: 80%;"></div>
+            </div>
+            <p class="text-center mt-4 text-gray-500">Tanpa Target</p>
+            <p class="text-center mt-4 font-bold text-red-600">Program Sementara Tidak Aktif</p>
+
+            <div class="mt-8 text-center">
+                <p class="text-lg font-semibold">Sudah Yakin Untuk Wakaf Uang?</p>
+                <a href="bayar.html" class="bg-teal-600 text-white py-2 px-4 rounded-full mt-2 inline-block hover:bg-teal-700">
+                  Klik Aku!
+              </a>
+                <p class="mt-4 text-sm text-gray-500">
+                    Atau anda bisa menjadi <span class="font-semibold">Fundraiser (penyebar amal baik)</span>
+                </p>
+            </div>
+            <div class="flex justify-center space-x-4 mt-8 text-teal-300">
+                <a href="#" class="hover:text-teal-400"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#" class="hover:text-teal-400"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#" class="hover:text-teal-400"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#" class="hover:text-teal-400"><i class="fab fa-youtube"></i> YouTube</a>
+            </div>
+        </div>
+    </section>
+    </div>
+    </main>
+
+</body>
+
+</html>
